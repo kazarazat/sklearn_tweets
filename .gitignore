@@ -1,0 +1,5 @@
+.DS_Store
+/sklearn_tweets.pyc
+*.pyc
+/get_sentiment.pyc
+/get_tweets.pyc
