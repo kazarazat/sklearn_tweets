@@ -82,10 +82,10 @@ For sentiment analysis we are using the interesting Valence Aware Dictionary and
 module for python created by [@cjhutto](https://github.com/cjhutto/vaderSentiment). Each tweet is
 iterated through sentiment analysis and enumerated to create the labeled target data.
 
-		def process_scores():
-			raw_scores = [sent_analyze(tweet) for tweet in some_array]
-			enumerated_scores = [enumerate_score(score) for score in raw_scores]
-			return enumerated_scores
+		def process(string_):
+			vader_A  = SentimentIntensityAnalyzer()
+			vs = vader_A.polarity_scores(string_)
+			return vs['compound']
 
 
 
